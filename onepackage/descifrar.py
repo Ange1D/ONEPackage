@@ -2,6 +2,15 @@ import re
 from .validarMensaje import validarMensaje
 
 def descifrar(message):
+    """Retorna el mensaje descifrado.
+
+    >>> descifrar("gaitober") == "gato"
+    True
+
+    >>> descifrar("GAITOBER") == "Message contains unsupported characters"
+    True
+    
+    """
     mensajeDescifrado = ""
     
     if validarMensaje(message):

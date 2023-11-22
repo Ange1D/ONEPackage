@@ -1,6 +1,15 @@
 from .validarMensaje import validarMensaje
 
 def cifrar(message):
+    """Retorna el mensaje cifrado.
+
+    >>> cifrar("gato") == "gaitober"
+    True
+
+    >>> cifrar("GATO") == "Message contains unsupported characters"
+    True
+    
+    """
     mensajeCifrado = ""
 
     if validarMensaje(message):
